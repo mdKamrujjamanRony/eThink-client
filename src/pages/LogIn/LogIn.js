@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import auth from "../../firebase.init";
 import Loading from "../Shared/Loading";
 
@@ -18,26 +18,32 @@ const LogIn = () => {
     loading,
     error,
   ] = useSignInWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
+  let from = location.state?.from?.pathname || "/";
   let signInError;
+  useEffect( () => {
+    if (user || gUser) {
+      navigate(from, { replace: true });
+    }
+  },[user, gUser, from, navigate]);
   if (loading || gLoading) {
     return <Loading></Loading>;
   }
   if (error || gError) {
       signInError = <p><small className="text-red-600">Error: {error.message}</small></p>;
   }
-  if (user || gUser) {
-    console.log(user || gUser);
-  }
-
+  
   const onSubmit = (data) => {
     console.log(data);
     signInWithEmailAndPassword(data.email, data.password);
+    navigate('/');
   };
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="text-2xl font-bold text-center">Login</h2>
+          <h2 className="text-4xl text-secondary font-bold text-center">Login</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div class="form-control w-full max-w-xs">
               <label class="label">
@@ -90,13 +96,13 @@ const LogIn = () => {
             {signInError}
             
 
-            <input className="btn w-full max-w-xs mt-5" type="submit" value='Login' />
-            <p><small>New to Doctors Portal? <Link to='/signup' className="text-secondary">Create New Account</Link></small></p>
+            <input className="btn w-full btn-primary max-w-xs mt-5" type="submit" value='Login' />
+            <p><small>New to eThink? <Link to='/signup' className="text-neutral">Create an account</Link></small></p>
           </form>
           <div className="divider">OR</div>
           <button
             onClick={() => signInWithGoogle()}
-            className="btn btn-outline"
+            className="btn btn-secondary btn-outline"
           >
             Continue with google
           </button>

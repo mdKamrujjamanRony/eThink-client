@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -14,7 +15,7 @@ const Banner = () => {
           <p class="py-6 text-lg">
           Start, switch, or advance your career with more than 5,000 courses, Professional Certificates, and degrees from world-class universities and companies.
           </p>
-          <button class="btn btn-primary">Join for free</button>
+          <Link to='/signup' className="btn btn-primary">Join for free</Link>
         </div>
       </div>
     </div>

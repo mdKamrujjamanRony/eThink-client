@@ -1,7 +1,7 @@
 import React from "react";
 
 const Service = ({ service }) => {
-  const { _id, img, name, title, avatar, ratting, price, view, video } =
+  const { img, name, title, avatar, ratting, price, view, video } =
     service;
   return (
     <>

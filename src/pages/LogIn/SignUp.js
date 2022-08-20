@@ -40,13 +40,13 @@ const SignUp = () => {
     console.log(data);
     await createUserWithEmailAndPassword(data.email, data.password);
     await updateProfile({ displayName: data.name });
-    navigate('/appointment');
+    navigate('/services');
   };
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="card w-96 bg-base-100 shadow-xl">
         <div className="card-body">
-          <h2 className="text-2xl font-bold text-center">Sign In</h2>
+          <h2 className="text-4xl text-secondary font-bold text-center">Sign Up</h2>
           <form onSubmit={handleSubmit(onSubmit)}>
             <div class="form-control w-full max-w-xs">
               <label class="label">
@@ -138,14 +138,14 @@ const SignUp = () => {
             {signInError}
 
             <input
-              className="btn w-full max-w-xs mt-5"
+              className="btn w-full btn-primary max-w-xs mt-5"
               type="submit"
               value="Sign Up"
             />
             <p>
               <small>
                 Already have an account?{" "}
-                <Link to="/login" className="text-secondary">
+                <Link to="/login" className="text-neutral">
                   Login
                 </Link>
               </small>
@@ -154,7 +154,7 @@ const SignUp = () => {
           <div className="divider">OR</div>
           <button
             onClick={() => signInWithGoogle()}
-            className="btn btn-outline"
+            className="btn btn-secondary btn-outline"
           >
             Continue with google
           </button>

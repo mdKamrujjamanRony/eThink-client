@@ -3,6 +3,7 @@ import Service from "../Services/Service";
 import Banner from "./Banner";
 import Collaborate from "./Collaborate";
 import Explore from "./Explore";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [services, setServices] = useState([]);
@@ -28,7 +29,7 @@ const Home = () => {
               </p>
             </div>
             <div>
-              <button class="btn btn-outline btn-primary">Browse Course</button>
+              <Link to='/services' className="btn btn-outline btn-primary">Browse Course</Link>
             </div>
           </div>
         </div>
