@@ -1,0 +1,68 @@
+[
+  {
+    "_id": 1,
+    "img": "https://maanlms.netlify.app/assets/img/course/course.png",
+    "title": "Typography Masterclass: A Complete Guide to Typography",
+    "avatar": "https://maanlms.netlify.app/assets/img/author/author.png",
+    "name": "Cristopher Henry",
+    "ratting": "4",
+    "price": "19",
+    "view": "354",
+    "video": "8h 40m"
+  },
+  {
+    "_id": 2,
+    "img": "https://maanlms.netlify.app/assets/img/course/course5.png",
+    "title": "Design Bootcamp. Typography Master, Colour & Grids",
+    "avatar": "https://maanlms.netlify.app/assets/img/author/author2.png",
+    "name": "Adam Gibson",
+    "ratting": "5",
+    "price": "12.99",
+    "view": "354",
+    "video": "9h 10m"
+  },
+  {
+    "_id": 3,
+    "img": "https://maanlms.netlify.app/assets/img/course/course3.png",
+    "title": "The Complete User Interface Design Bootcamp, UI/UX",
+    "avatar": "https://maanlms.netlify.app/assets/img/author/author3.png",
+    "name": " Jhonathon Lee",
+    "ratting": "4",
+    "price": "13.49",
+    "view": "914",
+    "video": "5h 40m"
+  },
+  {
+    "_id": 4,
+    "img": "https://maanlms.netlify.app/assets/img/course/course4.png",
+    "title": "Visual Design for Web Designers, UI Designers",
+    "avatar": "https://maanlms.netlify.app/assets/img/author/author4.png",
+    "name": "Abdul Samad",
+    "ratting": "3",
+    "price": "9.99",
+    "view": "184",
+    "video": "4h 10m"
+  },
+  {
+    "_id": 5,
+    "img": "https://maanlms.netlify.app/assets/img/course/course.png",
+    "title": "Learn 3D Printing and also how to build a 3d printer",
+    "avatar": "https://maanlms.netlify.app/assets/img/author/author.png",
+    "name": "Arko Ahsan",
+    "ratting": "5",
+    "price": "19",
+    "view": "1157",
+    "video": "2h 34m"
+  },
+  {
+    "_id": 6,
+    "img": "https://maanlms.netlify.app/assets/img/course/course7.png",
+    "title": "Mental Math Mastery - Super Speed Quick Math Tricks",
+    "avatar": "https://maanlms.netlify.app/assets/img/author/author7.png",
+    "name": "Kirill Eremenko",
+    "ratting": "2",
+    "price": "9.99",
+    "view": "132",
+    "video": "5h 25m"
+  }
+]
